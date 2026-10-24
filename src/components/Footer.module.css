@@ -1,0 +1,14 @@
+.footer {
+  background-color: #0a0a0a;
+  border-top: 1px solid #1f1f1f;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.copyText {
+  color: #525252;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin: 0;
+}

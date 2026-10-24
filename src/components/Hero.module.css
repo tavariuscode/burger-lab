@@ -1,0 +1,213 @@
+/* Container Geral da Seção (Organismo) */
+.heroSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 4rem; /* Equivalente ao gap-16 do Tailwind */
+  max-width: 1152px; /* 6xl */
+  margin: 0 auto;
+  padding: 5rem 1rem; /* py-20 px-4 */
+  border-b: 1px solid #1f1f1f;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Responsividade: Telas maiores (md:grid-cols-2) */
+@media (min-width: 768px) {
+  .heroSection {
+    grid-template-columns: 1fr 1fr;
+    padding: 7rem 2rem; /* py-28 px-8 */
+  }
+}
+
+/* Bloco de Conteúdo / Texto (Molécula) */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* space-y-8 */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .textContent {
+    text-align: left;
+  }
+}
+
+/* Átomo: Badge promocional */
+.badge {
+  display: inline-block;
+  align-self: center;
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .badge {
+    align-self: flex-start;
+  }
+}
+
+/* Átomo: Título Principal */
+.title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem;
+  }
+}
+
+.highlight {
+  color: #f59e0b;
+}
+
+/* Átomo: Descrição */
+.description {
+  color: #a3a3a3;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .description {
+    margin: 0;
+  }
+}
+
+/* Molécula: Agrupamento de botões e infos */
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .ctaGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .ctaGroup {
+    justify-content: flex-start;
+  }
+}
+
+/* Átomo: Botão Principal */
+.button {
+  background-color: #f59e0b;
+  color: #0a0a0a;
+  font-weight: 900;
+  padding: 0.875rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.1);
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .button {
+    width: auto;
+  }
+}
+
+.button:hover {
+  background-color: #d97706;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Molécula: Infos de Entrega */
+.metaInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  font-size: 0.75rem;
+  color: #a3a3a3;
+  font-weight: 500;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.iconAmber {
+  color: #f59e0b;
+}
+
+/* Bloco de Imagem (Molécula) */
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Átomo: Efeito de Luz atrás da foto */
+.glow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(245, 158, 11, 0.1);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 1;
+}
+
+/* Átomo: Container da Foto */
+.imageFrame {
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+  transform: rotate(2deg);
+  transition: transform 0.5s;
+}
+
+.imageFrame:hover {
+  transform: rotate(0deg);
+}
+
+/* Átomo: Imagem física */
+.burgerImage {
+  width: 100%;
+  max-width: 420px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
