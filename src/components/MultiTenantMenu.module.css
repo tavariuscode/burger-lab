@@ -1,0 +1,201 @@
+/* Container do Organismo */
+.section {
+  padding: 2.5rem 1rem;
+  max-width: 1152px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main, #0a0a0a);
+  color: var(--text-main, #f5f5f5);
+}
+
+/* Molécula: Seletor de Inquilino/Segmento (Apenas para demonstração no seu curso) */
+.tenantSwitcher {
+  background-color: #141414;
+  border: 1px solid #1f1f1f;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .tenantSwitcher {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.switcherLabel {
+  font-size: 0.813rem;
+  color: #a3a3a3;
+  font-weight: 600;
+}
+
+.switcherButtons {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .switcherButtons {
+    width: auto;
+  }
+}
+
+.switchBtn {
+  flex: 1;
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  border: 1px solid #262626;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.switchBtnActive {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Molécula: Navegação de Categorias (Scroll Horizontal no Celular) */
+.categoriesNav {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.categoriesNav::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.categoryBtn {
+  background-color: #141414;
+  color: #a3a3a3;
+  border: 1px solid #1f1f1f;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.813rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.categoryBtnActive {
+  background-color: var(--color-primary, #f59e0b);
+  color: var(--text-on-primary, #0a0a0a);
+  border-color: var(--color-primary, #f59e0b);
+}
+
+/* Organismo: Grid de Itens (1 coluna por padrão no celular) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* Se expande para 2 colunas em tablets e 3 em desktops */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Molécula: Card Dinâmico */
+.card {
+  background-color: #141414;
+  border: 1px solid #1f1f1f;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageContainer {
+  height: 12rem;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoContainer {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.itemName {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.itemDescription {
+  color: #a3a3a3;
+  font-size: 0.813rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Átomo: Metadados dinâmicos vindos do JSON */
+.metaBadge {
+  background-color: #1f1f1f;
+  color: #e5e5e5;
+  font-size: 0.688rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  align-self: flex-start;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: var(--color-primary, #f59e0b);
+}
+
+.actionBtn {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  border: 1px solid #262626;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionBtn:hover {
+  background-color: var(--color-primary, #f59e0b);
+  color: var(--text-on-primary, #0a0a0a);
+  border-color: var(--color-primary, #f59e0b);
+}
